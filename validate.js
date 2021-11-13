@@ -223,3 +223,18 @@ function sty_progress_bar(stywidth,stycolor,caption){
     pwd_caption.style.backgroundColor=stycolor;
     pwd_caption.innerHTML=caption;
 }
+
+// ...........................................Show Password ........................................................
+function showpassword(inppwdid,togglepwdid){
+    const passwordelement = document.querySelector("#"+inppwdid); 
+    const togglePassword = document.querySelector("#"+togglepwdid);
+    
+    passwordelement.type = "text";
+    togglePassword.innerHTML="Show"; 
+
+        setTimeout(function(){ 
+            passwordelement.type = "password";
+            togglePassword.innerHTML="Hide"; 
+         }, 1000);
+
+}
